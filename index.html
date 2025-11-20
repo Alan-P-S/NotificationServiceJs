@@ -7,6 +7,7 @@
 </head>
 <body>
     <button onclick="subscribe()">Subscribe</button>
+    <p id="keys"></p>
 </body>
 <script>
     addEventListener('load',async ()=>{let sw = await navigator.serviceWorker.register('./sw.js');console.log(sw)});
@@ -18,6 +19,7 @@
                 applicationServerKey:'BJpj3mhZbQ17He725pO1lvi4Hg6h0ju86wnzs4CI-9_4XcLXnYArchprGygb5n6bBYQtONw7_Qyq2vlyFBLzeeI',
             }
         );
+        document.getElementById('keys').innerHTML=push;
         console.log(JSON.stringify(push));
     }
 </script>
