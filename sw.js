@@ -1,6 +1,7 @@
 self.addEventListener('push',function(e){
+    console.log(e);
     var options = {
-        body:e.data.json(),
+        body:"Alert",
         icon:'images/example.png',
         vibrate:[100,50,100],
         data:{
