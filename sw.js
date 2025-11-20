@@ -1,7 +1,7 @@
 self.addEventListener('push',function(e){
     var options = {
-        body:'This notification is send from server',
-        icon:'images/example.js',
+        body:e.body,
+        icon:'images/example.png',
         vibrate:[100,50,100],
         data:{
             dateOfArrival:Date.now(),
