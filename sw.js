@@ -1,7 +1,11 @@
+const date = new Date();
+const examdate = new Date("2026-06-15T09:00:00");
+const remainingdays = (examdate - date)/(1000*60*60*24);
+console.log(remainingdays);
 self.addEventListener('push',function(e){
     console.log(e);
     var options = {
-        body:"Alert",
+        body:`${remainingdays} Days Remaining for Exam`,
         icon:'images/example.png',
         vibrate:[100,50,100],
         data:{
